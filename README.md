@@ -1,1 +1,3 @@
-# MBTI-Personlaity-type-analysis
+# Welcome to MBTI-Personlaity-type-analysis
+
+This is about 
