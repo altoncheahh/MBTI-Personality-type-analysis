@@ -11,11 +11,12 @@ Contributors:
 
 Problem Definition: 
 - Is it possible to accurately predict personality type through people's word choices?
+- Which model will be best used to predict it?
 
 Models used:
 1) Random Forest Classfier
-2) BalancedRandomForestClassifier
-3) K Neighbour Classifier
+2) Balanced Random Forest Classifier
+3) K Nearest Neighbour Classifier
 4) Logistic Regression
 
 Different types of analysis:
@@ -25,13 +26,20 @@ Different types of analysis:
 - Using NLTK's sentiment analysis to predict people's MBTI's personality type. This might work as different personality types will have different levels positivity/negativity, so by taking the average sentiment of their past 50 posts, we can try and make use of that as a feature.
 
 Conclusion
-- Instead of predicting all 16 personalities at a go, we predict each dichotomies: I-E, N-S, T-F, J-P
+- Personality can be predicted by people's expression – Solves our original problem
+- Model is overpredicting the "IN" personalities, so instead of predicting all 16 personalities at a go, we predict each dichotomies: I-E, N-S, T-F, J-P 
 - In most of the cases, J-P will always have a lower accuracy than the others. A guess would be that J-P is hard to predict for, as there are many context-dependent ways to describe a judged/perceived situation.
-- Improve of the problem of overfitting. The noise or random fluctuations in the training data is picked up and learned as concepts by the model. The problem is that these concepts do not apply to new data and negatively impact the models ability to generalize, like for example, our random forest classifer model, tends to over fit, hence getting that 1.0 accuracy for train set, so we minimize the effect with other models like logistic regression and k nearest neighbours.
+- Improve of the problem of overfitting, like how our random forest classifer model, tends to over fit, hence getting that 1.0 accuracy for train set. So we minimize the effect with other models like Logistic Regression and K Nearest Neighbours.
+
+1) For Rudimentary word frequency analysis:
+- Balanced Random Forest has the highest accuracy(78.5%) on the data, and thus is the best model for this analysis, as compared to K Nearest Neighbours, Random Forest and Logistic Regression.
+
+2) For Sentiment analysis:
+- If we do not balance the data, every dichotomy except T-F is heavily skewed, and if balanced, the accuracy is significantly lower. Therefore conclude that Balanced Random Forest, although overfitted, still has reasonable accuracy(79.1%) on the raw data, and thus is the best model for this analysis, as compared to K Nearest Neighbours, Random Forest and Logistic Regression.
 
 
 
 What did we learn from this project?
-- Learnt new machine learning models like K Neighbour Classifier and Logistic Regression
-- Use SMOTE over-sampler and Tomek cleaning, classes now have equal count to address the root problem of imbalance
-- Using NLTK's VADAR Sentiment Analysis to generate new features
+- Learnt new machine learning models like K Neighbour Classifier, Logistic Regression, Balanced Random Forest Classifier 
+- Imbalanced data has a huge impact on the performance of ML models. And so we use SMOTE over-sampler and Tomek cleaning, classes now have equal count to address the root problem of imbalance
+- Using NLTK's VADAR Sentiment Analysis to generate new features for sentiment analysis
