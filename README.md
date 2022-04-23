@@ -43,3 +43,7 @@ This is a Mini-Project for SC1015 (Introduction to Data Science and Artificial I
 - Learnt new machine learning models like K Neighbour Classifier, Logistic Regression, Balanced Random Forest Classifier 
 - Imbalanced data has a huge impact on the performance of ML models. And so we use SMOTE over-sampler and Tomek cleaning, classes now have equal count to address the root problem of imbalance
 - Using NLTK's VADAR Sentiment Analysis to generate new features for sentiment analysis
+
+# References
+- https://www.kaggle.com/datasets/datasnaek/mbti-type
+- https://realpython.com/python-nltk-sentiment-analysis/#customizing-nltks-sentiment-analysis
