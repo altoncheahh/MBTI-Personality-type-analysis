@@ -6,7 +6,7 @@ This is a Mini-Project for SC1015 (Introduction to Data Science and Artificial I
 # Contributors
 1) Alistair Yong Jia Jin - Sentiment Analysis
 2) Alton Cheah Zhixian - Exploratory Data Analysis
-3) Tan Chuan Liang - Rudimentary Word Anlaysis
+3) Tan Chuan Liang - Rudimentary Word Frequency Anlaysis
 
 
 # Problem Definition
@@ -31,7 +31,7 @@ This is a Mini-Project for SC1015 (Introduction to Data Science and Artificial I
 - In most of the cases, J-P will always have a lower accuracy than the others. A guess would be that J-P is hard to predict for, as there are many context-dependent ways to describe a judged/perceived situation.
 - Improve of the problem of overfitting, like how our random forest classifer model, tends to over fit, hence getting that 1.0 accuracy for train set. So we minimize the effect with other models like Logistic Regression and K Nearest Neighbours.
 
-1) For Rudimentary word frequency analysis:
+1) For Rudimentary Word Frequency analysis:
 - Balanced Random Forest has the highest accuracy on the data, and thus is the best model for this analysis, as compared to K Nearest Neighbours, Random Forest.
 
 2) For Sentiment analysis:
